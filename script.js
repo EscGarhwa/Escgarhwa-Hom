@@ -1,22 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const timerElement = document.getElementById("countdown-timer");
-    const eventDate = new Date("2024-12-31T00:00:00");
+// script.js
 
-    function updateCountdown() {
-        const now = new Date();
-        const timeRemaining = eventDate - now;
-        
-        if (timeRemaining > 0) {
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+document.addEventListener('DOMContentLoaded', () => {
+    // Add smooth scroll for navigation links
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-            timerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        } else {
-            timerElement.textContent = "Event has started!";
-        }
-    }
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - 60,
+                behavior: 'smooth'
+            });
+        });
+    });
 
-    setInterval(updateCountdown, 1000);
+    // Contact form submission (you can add more functionalities here)
+    const contactForm = document.querySelector('form');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Your message has been sent!');
+        contactForm.reset();
+    });
 });
