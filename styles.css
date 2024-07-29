@@ -87,4 +87,30 @@ body {
 }
 
 .card-description {
-    font-size: 1em
+    font-size: 1em;
+    color: #777;
+}
+
+.card-content:hover .card-title {
+    animation: cardTitleMove 1s ease-in-out infinite;
+}
+
+@keyframes cardTitleMove {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+/* Scrolling Text */
+.scrolling-text {
+    font-size: 1.2em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
