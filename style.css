@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.welcome-container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.logo-animation img {
+    width: 150px;
+    animation: logoMove 3s ease-in-out infinite;
+}
+
+.welcome-text {
+    font-size: 2.5em;
+    color: #333;
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+.subheading {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.highlight-item {
+    width: 20%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.highlight-item:hover {
+    transform: scale(1.05);
+}
+
+#interactive-map {
+    background: url('world-map.png') no-repeat center center;
+    width: 300px;
+    height: 200px;
+    margin: 20px auto;
+    animation: mapAnimate 5s linear infinite;
+}
+
+#countdown-timer {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#enroll-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes logoMove {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes textGlow {
+    0%, 100% { text-shadow: 0 0 5px #fff; }
+    50% { text-shadow: 0 0 20px #fff; }
+}
+
+@keyframes mapAnimate {
+    0% { background-position: 0 0; }
+    100% { background-position: 300px 200px; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
