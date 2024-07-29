@@ -3,38 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Animated Webpage</title>
+    <title>Einstein Study Circle</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1 class="animated-text">Welcome to the Animated World</h1>
-        </div>
-        <div class="cards">
-            <div class="card animated-card">
-                <div class="card-content">
-                    <h2 class="card-title">Dynamic Card 1</h2>
-                    <p class="card-description">This card flips and scales up on hover.</p>
-                </div>
+    <header class="main-header">
+        <div class="logo">Einstein Study Circle</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <h1>Welcome to Einstein Study Circle</h1>
+        <p>Your path to a brighter future starts here.</p>
+        <a href="#courses" class="cta-button">Explore Courses</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Einstein Study Circle is dedicated to providing quality education to students of all ages. Our experienced faculty and comprehensive curriculum ensure that each student achieves their full potential.</p>
+    </section>
+
+    <section id="courses" class="courses-section">
+        <h2>Our Courses</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>Mathematics</h3>
+                <p>Learn the fundamentals of mathematics and build a strong foundation for advanced studies.</p>
             </div>
-            <div class="card animated-card">
-                <div class="card-content">
-                    <h2 class="card-title">Dynamic Card 2</h2>
-                    <p class="card-description">This card flips and scales up on hover.</p>
-                </div>
+            <div class="course-card">
+                <h3>Science</h3>
+                <p>Explore the world of science with hands-on experiments and engaging lessons.</p>
             </div>
-            <div class="card animated-card">
-                <div class="card-content">
-                    <h2 class="card-title">Dynamic Card 3</h2>
-                    <p class="card-description">This card flips and scales up on hover.</p>
-                </div>
+            <div class="course-card">
+                <h3>English</h3>
+                <p>Improve your language skills with our comprehensive English courses.</p>
             </div>
         </div>
-        <div class="footer">
-            <p class="scrolling-text">This is some scrolling text that moves from right to left.</p>
-        </div>
-    </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Einstein Study Circle. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
