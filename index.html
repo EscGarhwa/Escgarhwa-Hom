@@ -5,68 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einstein Study Circle</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
-        <div class="logo">Einstein Study Circle</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="container">
+            <h1 class="logo">Einstein Study Circle</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero-section">
-        <h1>Welcome to Einstein Study Circle</h1>
-        <p>Your path to a brighter future starts here.</p>
-        <a href="#courses" class="cta-button">Explore Courses</a>
-    </section>
-
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <p>Einstein Study Circle is dedicated to providing quality education to students of all ages. Our experienced faculty and comprehensive curriculum ensure that each student achieves their full potential.</p>
-    </section>
-
-    <section id="courses" class="courses-section">
-        <h2>Our Courses</h2>
-        <div class="course-cards">
-            <div class="course-card">
-                <h3>Mathematics</h3>
-                <p>Learn the fundamentals of mathematics and build a strong foundation for advanced studies.</p>
-            </div>
-            <div class="course-card">
-                <h3>Science</h3>
-                <p>Explore the world of science with hands-on experiments and engaging lessons.</p>
-            </div>
-            <div class="course-card">
-                <h3>English</h3>
-                <p>Improve your language skills with our comprehensive English courses.</p>
+    <section id="home" class="section">
+        <div class="container">
+            <div class="home-content">
+                <h2 class="animated-text">Welcome to Einstein Study Circle</h2>
+                <p>Your path to academic excellence.</p>
+                <a href="#courses" class="btn">Explore Courses</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We provide high-quality education for students in various subjects.</p>
+        </div>
+    </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+    <section id="courses" class="section">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="course-cards">
+                <div class="card">
+                    <h3>Course 1</h3>
+                    <p>Details about course 1.</p>
+                    <a href="course-details.html?course=1" class="btn">View Details</a>
+                </div>
+                <div class="card">
+                    <h3>Course 2</h3>
+                    <p>Details about course 2.</p>
+                    <a href="course-details.html?course=2" class="btn">View Details</a>
+                </div>
+                <div class="card">
+                    <h3>Course 3</h3>
+                    <p>Details about course 3.</p>
+                    <a href="course-details.html?course=3" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+    <section id="faculty" class="section">
+        <div class="container">
+            <h2>Our Faculty</h2>
+            <div class="faculty-cards">
+                <div class="card faculty-card" data-faculty="1">
+                    <h3>Faculty Member 1</h3>
+                    <p>Bio of faculty member 1.</p>
+                </div>
+                <div class="card faculty-card" data-faculty="2">
+                    <h3>Faculty Member 2</h3>
+                    <p>Bio of faculty member 2.</p>
+                </div>
+                <div class="card faculty-card" data-faculty="3">
+                    <h3>Faculty Member 3</h3>
+                    <p>Bio of faculty member 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <button type="submit">Send</button>
-        </form>
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial-cards">
+                <div class="card">
+                    <p>"Testimonial 1 from a satisfied student."</p>
+                </div>
+                <div class="card">
+                    <p>"Testimonial 2 from a satisfied student."</p>
+                </div>
+                <div class="card">
+                    <p>"Testimonial 3 from a satisfied student."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for more information.</p>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Einstein Study Circle. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Einstein Study Circle. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
