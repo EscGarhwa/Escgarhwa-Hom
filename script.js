@@ -1,27 +1,42 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Add smooth scroll for navigation links
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const observerOptions = {
+        threshold: 0.1
+    };
 
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(animateOnScroll, observerOptions);
+
+    document.querySelectorAll('.animated-text, .card').forEach(element => {
+        observer.observe(element);
+    });
+
+    const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
+            const targetId = e.target.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             window.scrollTo({
-                top: targetElement.offsetTop - 60,
+                top: targetElement.offsetTop - 50,
                 behavior: 'smooth'
             });
         });
     });
 
-    // Contact form submission (you can add more functionalities here)
-    const contactForm = document.querySelector('form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Your message has been sent!');
-        contactForm.reset();
+    const facultyCards = document.querySelectorAll('.faculty-card');
+    facultyCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const facultyId = card.getAttribute('data-faculty');
+            alert(`More information about Faculty Member ${facultyId}`);
+        });
     });
 });
